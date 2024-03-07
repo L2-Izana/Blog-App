@@ -60,9 +60,9 @@ class PostListView(LoginRequiredMixin, ListView):
                 comments_dict[curr_post] = [(curr_user, curr_comment)]
             else:
                 comments_dict[curr_post].append((curr_user, curr_comment))
-        for post_rec, user_comment_recs in comments_dict.items():
-            for user_comment_rec in user_comment_recs:
-                print(f"{user_comment_rec[0]} commented on {post_rec}: {user_comment_rec[1]}")
+        # for post_rec, user_comment_recs in comments_dict.items():
+        #     for user_comment_rec in user_comment_recs:
+        #         print(f"{user_comment_rec[0]} commented on {post_rec}: {user_comment_rec[1]}")
         return comments_dict
     
     def get_context_data(self, **kwargs):
